@@ -16,12 +16,12 @@
             android:layout_height="wrap_content"
             android:hint="Name" />
 
-        <EditText
+        <Spinner
             android:id="@+id/prodTypeEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type"
-            android:inputType="number" />
+            android:spinnerMode="dropdown"
+            android:hint="Type" />
 
         <EditText
             android:id="@+id/prodCostEdit"

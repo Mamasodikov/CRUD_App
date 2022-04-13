@@ -2,6 +2,7 @@ package com.example.crudapp.api
 
 import com.example.crudapp.models.Product
 import com.example.crudapp.models.ProductPost
+import com.example.crudapp.models.ProductType
 import com.example.crudapp.utils.Credentials.Companion.BASE_URL
 import com.google.gson.GsonBuilder
 import okhttp3.ResponseBody
@@ -25,6 +26,9 @@ interface API {
 
     @DELETE("product/{id}")
     suspend fun deleteData(@Path("id") prodID: Int): ResponseBody
+
+    @GET("product/get-product-types")
+    suspend fun getProductTypes ():List<ProductType>
 
     companion object {
 

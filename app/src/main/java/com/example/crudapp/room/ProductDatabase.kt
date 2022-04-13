@@ -5,10 +5,11 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.crudapp.models.Product
+import com.example.crudapp.models.ProductType
 import com.example.crudapp.models.RemoteKey
 
 @Database(
-    entities = [Product::class, RemoteKey::class],
+    entities = [Product::class, RemoteKey::class, ProductType::class],
     version = 1,
     exportSchema = false
 )
@@ -16,6 +17,7 @@ import com.example.crudapp.models.RemoteKey
 abstract class ProductDatabase : RoomDatabase() {
     abstract fun productsDao(): ProductsDao
     abstract fun remoteDao(): RemoteDao
+    abstract fun productTypeDao(): ProductTypeDao
 
     companion object {
         @Volatile

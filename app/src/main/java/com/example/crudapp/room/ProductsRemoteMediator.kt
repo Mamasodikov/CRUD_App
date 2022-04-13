@@ -99,7 +99,7 @@ class ProductsRemoteMediator (
             ?.data?.lastOrNull()
             .let{
                     product ->
-                database.remoteDao().remoteKeyByQuery(product?.id!!)
+                database.remoteDao().remoteKeyByQuery(product?.id?:0)
             }
 
     }
@@ -110,7 +110,7 @@ class ProductsRemoteMediator (
             ?.data?.firstOrNull()
             .let{
                     product ->
-                database.remoteDao().remoteKeyByQuery(product?.id!!)
+                database.remoteDao().remoteKeyByQuery(product?.id?:0)
             }
     }
 
